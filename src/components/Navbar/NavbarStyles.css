@@ -22,25 +22,25 @@ nav{
     justify-content: center;
 }
 
-.logo {
+.icon {
     width: 36px;
     height: 36px;
     color: #fff;
     transition: 0.2s ease-in-out;
 }
 
-.logo:hover {
+.icon:hover {
     color: cadetblue;
 }
 
-#navbar-list {
+#navbar-list ul {
     display: flex;
     align-items: center;
     justify-content: center;
 
 }
 
-#navbar-list li {
+#navbar-list ul li {
     list-style: none;
     padding: 0 20px;
     position: relative;
@@ -54,6 +54,45 @@ nav{
     transition: 0.2s ease-in-out;
 }
 
-#navbar-list a:hover{
+#navbar-list a:hover, #navbar-list a.active {
     color: cadetblue;
+}
+
+#mobile {
+    display: none;
+}
+
+@media screen and (max-width: 769px){
+    
+    #navbar-list ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        position: fixed;
+        top: -200px;
+        right: 0px;
+        width: 100%;
+        background-color: #262333;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 40px 0 40px 10px;
+        transition: 0.3s ease-in-out;
+    }
+
+    #navbar-list.active ul {
+        display: flex;
+        top: 90px;
+    }
+
+    #navbar-list ul li {
+        margin-bottom: 24px;
+    }
+
+    #mobile {
+        display: block;
+    }
+
+    #mobile i {
+        cursor: pointer;
+    }
 }
