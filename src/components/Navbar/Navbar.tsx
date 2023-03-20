@@ -21,10 +21,10 @@ export class Navbar extends Component{
                         <div id="navbar-list" className={this.state.clicked ? "#navbar-list active" : "#navbar-list"} >
                             <ul>
                                 <li>
-                                    <a className="active" href="/">Home</a>
+                                    <a className="active" href="#Home">Home</a>
                                 </li>
                                 <li>
-                                    <a href="/about">About</a>
+                                    <a href="#About">About</a>
                                 </li>
                             </ul>
                         </div>
