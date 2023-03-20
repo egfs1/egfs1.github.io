@@ -1,5 +1,6 @@
 import { Component } from 'react'
-import { FiBarChart, FiGithub, FiMenu, FiX } from 'react-icons/fi'
+import { FiMenu, FiX } from 'react-icons/fi'
+import { AiFillGithub } from 'react-icons/ai'
 import './NavbarStyles.css'
 
 export class Navbar extends Component{
@@ -15,7 +16,7 @@ export class Navbar extends Component{
                 <nav>
                     <div className="content">
                         <a href="https://github.com/egfs1">
-                            <FiGithub className='icon'/>
+                            <AiFillGithub className='icon'/>
                         </a>
     
                         <div id="navbar-list" className={this.state.clicked ? "#navbar-list active" : "#navbar-list"} >
