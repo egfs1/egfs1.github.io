@@ -1,42 +1,42 @@
-import { Component } from 'react'
-import { FiMenu, FiX } from 'react-icons/fi'
-import { BsGithub } from 'react-icons/bs'
-import './NavbarStyles.css'
+import './NavbarStyles.scss'
+import { useState, useEffect } from 'react'
+import { BsGithub, BsLinkedin } from 'react-icons/bs' 
 
-export class Navbar extends Component{
-    state = { clicked: false }
+export function Navbar(){
+    const [isDarkMode, setIsDarkMode] = useState(false);
 
-    handleClick = () => {
-        this.setState({ clicked: !this.state.clicked})
+    useEffect(()=> {
+        document.querySelector("body")?.setAttribute('data-theme', isDarkMode ? 'dark' : 'light')
+    },[isDarkMode])
+
+    function toggleDarkMode(){
+        setIsDarkMode(!isDarkMode);
     }
 
-    render(){
-        return(
-            <>
-                <nav>
-                    <div className="content">
-                        <a href="https://github.com/egfs1">
-                            <BsGithub className='icon'/>
-                        </a>
-    
-                        <div id="navbar-list" className={this.state.clicked ? "#navbar-list active" : "#navbar-list"} >
-                            <ul>
-                                <li>
-                                    <a className="active" href="#Home">Home</a>
-                                </li>
-                                <li>
-                                    <a href="#About">About</a>
-                                </li>
-                            </ul>
-                        </div>
-    
-                        <div id="mobile" onClick={this.handleClick}>
-                            <i children={this.state.clicked ? <FiX className='icon'/> : <FiMenu className='icon'/>}/>
-                        </div>
+    return(
+        <div className='nav-wrapper'>
+            <nav>
+                <input className="menu-checkbox" id="menu-checkbox" type="checkbox" />
+                <label htmlFor="menu-checkbox" className="menu-label"></label>
+                <div className="toggle-dark-mode">
+                    <input className="dark-mode-checkbox" id="dark-mode-checkbox" type="checkbox" onClick={toggleDarkMode}/>
+                    <label htmlFor="dark-mode-checkbox" className="dark-mode-label">
+                        <div className="sun-decoration"></div>
+                        <div className="sun-decoration"></div>
+                        <div className="sun-decoration"></div>
+                        <div className="sun-decoration"></div>
+                        <div className="sun-decoration"></div>
+                        <div className="sun-decoration"></div>
+                        <div className="sun-decoration"></div>
+                        <div className="sun-decoration"></div>
+                    </label>
+                </div>
+                <div className="navigation-wrapper" >
+                    <div className="navigation">
+                        <a className="navigation-item" href="#AboutMe">About me</a>
                     </div>
-                </nav>
-            </>
-        )
-
-    }
+                </div>
+            </nav>
+        </div>
+    )
 }
