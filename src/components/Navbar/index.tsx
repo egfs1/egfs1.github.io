@@ -36,10 +36,10 @@ export function Navbar(){
                         <a className="navigation-item" href="#AboutMe">{translate('navbar.about')}</a>
                     </div>
                     <div className='languages'>
-                        <a className="language-flag" href="/home?lang=pt-BR">
+                        <a className="language-flag" href="?lang=pt-BR">
                             <img className="icon" src='/images/brazil-flag.svg'/>
                         </a>
-                        <a className="language-flag" href="/home?lang=en-US">
+                        <a className="language-flag" href="?lang=en-US">
                             <img className="icon" src="/images/united-states-flag.svg"/>
                         </a>
                     </div>
