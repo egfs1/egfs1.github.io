@@ -1,7 +1,12 @@
-import { Navbar } from './components/Navbar/Navbar.js'
-import { Content } from './components/Content/Content.js'
+import { Navbar } from './components/Navbar'
+import { Content } from './components/Content'
+import { setLanguageToI18n } from './services/i18n.js';
 
 function App() {
+  const params = new URL(window.location.href).searchParams;
+  console.log(params.get("lang"))
+  setLanguageToI18n(params.get("lang"));
+
   return (
     <div className="App">
       <Navbar/>

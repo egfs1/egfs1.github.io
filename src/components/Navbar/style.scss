@@ -29,6 +29,7 @@ nav{
     .navigation{
         display: flex;
         gap: 12px;
+        -webkit-tap-highlight-color: transparent;
         
         .navigation-item {
             text-decoration: none;

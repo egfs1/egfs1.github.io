@@ -1,6 +1,6 @@
-import './NavbarStyles.scss'
+import './style.scss'
 import { useState, useEffect } from 'react'
-import { BsGithub, BsLinkedin } from 'react-icons/bs' 
+import { translate } from '../../services/i18n';
 
 export function Navbar(){
     const [isDarkMode, setIsDarkMode] = useState(false);
@@ -33,7 +33,7 @@ export function Navbar(){
                 </div>
                 <div className="navigation-wrapper" >
                     <div className="navigation">
-                        <a className="navigation-item" href="#AboutMe">About me</a>
+                        <a className="navigation-item" href="#AboutMe">{translate('navbar.about')}</a>
                     </div>
                 </div>
             </nav>

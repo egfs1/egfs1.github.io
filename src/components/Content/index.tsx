@@ -1,4 +1,4 @@
-import './ContentStyles.scss'
+import './style.scss'
 
 export function Content(){
     return(
