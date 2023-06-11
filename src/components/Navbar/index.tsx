@@ -35,6 +35,14 @@ export function Navbar(){
                     <div className="navigation">
                         <a className="navigation-item" href="#AboutMe">{translate('navbar.about')}</a>
                     </div>
+                    <div className='languages'>
+                        <a className="language-flag" href="/home?lang=pt-BR">
+                            <img className="icon" src='/images/brazil-flag.svg'/>
+                        </a>
+                        <a className="language-flag" href="/home?lang=en-US">
+                            <img className="icon" src="/images/united-states-flag.svg"/>
+                        </a>
+                    </div>
                 </div>
             </nav>
         </div>

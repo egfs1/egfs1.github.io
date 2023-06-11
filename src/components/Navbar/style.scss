@@ -1,5 +1,5 @@
 
-$navigation-items: aboutme;
+$navigation-items: about;
 
 .nav-wrapper{
     display: flex;
@@ -24,16 +24,15 @@ nav{
 
 .navigation-wrapper {
     display: flex;
-    gap:12px;
+    gap:20px;
     
     .navigation{
         display: flex;
-        gap: 12px;
         -webkit-tap-highlight-color: transparent;
         
         .navigation-item {
             text-decoration: none;
-            margin: 0 20px;
+            margin: 0 10px;
             font-size: 1.3rem;
             font-weight: 600;
             color: var(--navbar_text);
@@ -45,26 +44,19 @@ nav{
             }   
         }
     }
-    
-    .social{
+
+    .languages{
         display: flex;
         gap: 12px;
-    
-        .social-item{
+        .language-flag{
             display: flex;
-            justify-content: space-evenly;
+            justify-content: center;
             align-items: center;
-            
+            cursor: pointer;
             .icon{
-                color: var(--navbar_text);
-                transition: all 1s;
-    
-                &:hover{
-                    color: gray;
-                    transition: all .2s;
-                }   
+                width: 32px;
+                height: 32px;
             }
-    
         }
     }
 }
@@ -198,12 +190,13 @@ nav{
         }
 
         .navigation{
-            border-bottom: 1px solid var(--navbar_decoration);
+            display: block;
             opacity: 0;
             visibility: hidden;
             transform: translateY(-20px);
-
+            
             .navigation-item{
+                border-bottom: 1px solid var(--navbar_decoration);
                 background: var(--navbar_background);
                 color: var(--navbar_text);
                 display: block;
@@ -218,7 +211,25 @@ nav{
                     transition: all .2s;
                 }
             }
+        }
+
+        .languages{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            gap: 24px;
+            transform: translateY(-20px);
+            padding: 12px 0;
+            background: var(--navbar_background);
             
+            .language-flag{
+                .icon{
+                    width: 42px;
+                    height: 42px;
+                }
+            }
         }
     }
 
@@ -261,7 +272,7 @@ nav{
             display: block;
             opacity: 1;
             visibility: visible;
-            transition: all 1s;
+            transition: all 2s;
             &::before{
                 opacity: 1;
                 visibility: visible;
@@ -281,6 +292,12 @@ nav{
                         }
                     }
                 }
+            }
+
+            .languages{
+                opacity: 1;
+                visibility: visible;
+                transition: background-color 1s;
             }
         }
     }
