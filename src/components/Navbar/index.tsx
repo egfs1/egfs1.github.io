@@ -1,6 +1,7 @@
 import './style.scss'
 import { useState, useEffect } from 'react'
 import { translate } from '../../services/i18n';
+import { HiOutlineSun, HiMoon } from 'react-icons/hi'
 
 export function Navbar(){
     const [isDarkMode, setIsDarkMode] = useState(false);
@@ -21,14 +22,8 @@ export function Navbar(){
                 <div className="toggle-dark-mode">
                     <input className="dark-mode-checkbox" id="dark-mode-checkbox" type="checkbox" onClick={toggleDarkMode}/>
                     <label htmlFor="dark-mode-checkbox" className="dark-mode-label">
-                        <div className="sun-decoration"></div>
-                        <div className="sun-decoration"></div>
-                        <div className="sun-decoration"></div>
-                        <div className="sun-decoration"></div>
-                        <div className="sun-decoration"></div>
-                        <div className="sun-decoration"></div>
-                        <div className="sun-decoration"></div>
-                        <div className="sun-decoration"></div>
+                        <HiOutlineSun className="sun-icon"/>
+                        <HiMoon className="moon-icon"/>
                     </label>
                 </div>
                 <div className="navigation-wrapper" >

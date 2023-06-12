@@ -68,101 +68,47 @@ nav{
 .dark-mode-checkbox {
     &:checked + .dark-mode-label{
         
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-        transform: rotate(360deg);
-
-        &::after{
+        .sun-icon{
+            transition: all .5s;
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .moon-icon{
+            transition: all 1s;
             opacity: 1;
             visibility: visible;
-        }
-
-        .sun-decoration{
-            opacity: 0;
         }
     }
 }
 
 .dark-mode-label{
     background: none var(--body_background);
-    display: block;
-    position: absolute;
-    height: 44px;
-    width: 44px;
-    top: calc(50% - 22px);
-    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    width: 48px;
     cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transition: all 1s;
     -webkit-tap-highlight-color: transparent;
 
-    &::before{
+    .sun-icon{
         position: absolute;
-        top: calc(50% - 6px);
-        left: calc(50% - 6px);
-        background: var(--navbar_text);
-        content: '';
-        height: 12px;
-        width: 12px;
-        border-radius: 50%;
         transition: all 1s;
+        width: 24px;
+        height: 24px;
+        color: var(--navbar_text);
     }
 
-    &::after{
+    .moon-icon{
         position: absolute;
-        top: 12px;
-        left: 20px;
-        background: var(--body_background);
-        content: '';
-        height: 12px;
-        width: 12px;
-        border-radius: 50%;
-        transition: all 1s;
+        transition: all .5s;
+        width: 24px;
+        height: 24px;
         opacity: 0;
         visibility: hidden;
-    }
-
-    .sun-decoration{
-        content: '';
-        position: absolute;
-        background-color: var(--navbar_text);
-        border-radius: 100%;
-        height: 5px;
-        width: 3px;
-        top: calc(50% - 2.5px);
-        left: calc(50% - 1.5px);
-        transition: all 0.5s;
-        
-        &:nth-of-type(1){
-            transform: rotate(0deg) translateY(10px);
-        }
-
-        &:nth-of-type(2){
-            transform: rotate(45deg) translateY(10px);
-        }
-
-        &:nth-of-type(3){
-            transform: rotate(90deg) translateY(10px);
-        }
-
-        &:nth-of-type(4){
-            transform: rotate(135deg) translateY(10px);
-        }
-
-        &:nth-of-type(5){
-            transform: rotate(180deg) translateY(10px);
-        }
-
-        &:nth-of-type(6){
-            transform: rotate(225deg) translateY(10px);
-        }
-
-        &:nth-of-type(7){
-            transform: rotate(270deg) translateY(10px);
-        }
-
-        &:nth-of-type(8){
-            transform: rotate(315deg) translateY(10px);
-        }
+        color: var(--navbar_text);
     }
 }
 
@@ -242,33 +188,26 @@ nav{
         visibility: hidden;
 
         &:checked + .menu-label{
-            border: 4px solid var(--navbar_decoration);
+            border: 2px solid var(--navbar_decoration);
             border-radius: 50%;
-            height: 28px;
-            width: 28px;
-            top: calc(50% - calc(12px*1.3));
+            height: 24px;
+            width: 24px;
+            top: calc(50% - 13px);
             transform: rotate(-135deg);
 
             &::before {
                 background: var(--navbar_decoration);
-                top: 12px;
-                left: 6px;
+                top: 11px;
+                left: 4px;
                 width: 16px;
             }
             &::after {
                 background: var(--navbar_decoration);
                 opacity: 1;
-                top: 12px;
-                left: 6px;
+                top: 11px;
+                left: 4px;
                 visibility: visible;
                 width: 16px;
-            }
-            &:hover {
-                border-color: var(--navbar_text);
-                &::before,
-                &::after {
-                    background: var(--navbar_text);
-                }
             }
         }
         &:checked ~ .navigation-wrapper{
@@ -308,16 +247,16 @@ nav{
     .menu-label{
         display: block;
         background: none transparent;
-        border: 4px solid var(--navbar_text);
+        border: 2px solid var(--navbar_text);
         border-left: 0 solid transparent;
         border-right: 0 solid transparent;
         cursor: pointer;
-        width: 32px;
-        height: 24px;
+        width: 24px;
+        height: 20px;
         float: right;
         transition: all .2s;
         position: absolute;
-        top: calc(50% - 16px);
+        top: calc(50% - 12px);
         right: 40px;
         -webkit-tap-highlight-color: transparent;
 
@@ -325,11 +264,11 @@ nav{
         &::before{
             position: absolute;
             background: var(--navbar_text);
+            top: calc(50% - 1px);
+            left: calc(50% - 11px);
             content: '';
-            height: 4px;
-            top: 10px;
-            left: 2px;
-            width: 28px;
+            height: 2px;
+            width: 22px;
             
             transition: all .1s;
         }
@@ -337,7 +276,7 @@ nav{
             position: absolute;
             background: var(--navbar_text);
             content: '';
-            height: 4px;
+            height: 2px;
             width: 100%;
             opacity: 0;
             visibility: hidden;
