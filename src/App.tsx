@@ -4,7 +4,6 @@ import { setLanguageToI18n } from './services/i18n.js';
 
 function App() {
   const params = new URL(window.location.href).searchParams;
-  console.log(params.get("lang"))
   setLanguageToI18n(params.get("lang"));
 
   return (

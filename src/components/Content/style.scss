@@ -1,25 +1,19 @@
 .content-wrapper{
     display: flex;
     justify-content: center;
-    height: 90vh;
-    
-    padding-top: 82px;
-
+    height: 100vh;
+    padding-top: 72px;
 }
 
 .content{
     display: flex;
     justify-content: center;
-    align-items: center;
-    border-radius: .7rem;
     color: var(--navbar_text);
 
-    width: 1200px;
+    width: 1280px;
     min-width: 100px;
-    background-color: var(--navbar_background);
-    margin: 20px 40px;
+    background-color: var(--navbar-background);
     transition: all 1s;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 @media screen and (max-width: 769px){

@@ -33,7 +33,10 @@ export function Navbar(){
                 </div>
                 <div className="navigation-wrapper" >
                     <div className="navigation">
-                        <a className="navigation-item" href="#AboutMe">{translate('navbar.about')}</a>
+                        <a className="navigation-item" href="#start">{translate('navbar.home')}</a>
+                        <a className="navigation-item" href="#about_me">{translate('navbar.about_me')}</a>
+                        <a className="navigation-item" href="#my_projects">{translate('navbar.my_projects')}</a>
+                        <a className="navigation-item" href="#contact_me">{translate('navbar.contact_me')}</a>
                     </div>
                     <div className='languages'>
                         <a className="language-flag" href="?lang=pt-BR">

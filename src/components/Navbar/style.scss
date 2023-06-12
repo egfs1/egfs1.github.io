@@ -5,36 +5,39 @@ $navigation-items: about;
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 82px;
+    height: 72px;
     position: fixed;
-    background-color: var(--navbar_background);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     z-index: 1;
     transition: all 1s;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
 }
 
 nav{
+    width: 1248px;
     display: flex;
+    padding: 0 16px;
     justify-content: space-between;
     align-items: center;
-    width: 1200px;
     min-width: 100px;
-    padding: 20px 40px;
 }
 
 .navigation-wrapper {
     display: flex;
-    gap:20px;
+    gap:32px;
     
     .navigation{
         display: flex;
         -webkit-tap-highlight-color: transparent;
         
         .navigation-item {
+            display: flex;
+            align-items: center;
             text-decoration: none;
-            margin: 0 10px;
-            font-size: 1.3rem;
-            font-weight: 600;
+            margin: 0 32px;
+            font-size: 1rem;
+            font-weight: 400;
             color: var(--navbar_text);
             transition: all 1s;
     
@@ -47,7 +50,7 @@ nav{
 
     .languages{
         display: flex;
-        gap: 12px;
+        gap: 16px;
         .language-flag{
             display: flex;
             justify-content: center;
@@ -94,24 +97,24 @@ nav{
 
     &::before{
         position: absolute;
-        top: calc(50% - 8px);
-        left: calc(50% - 8px);
+        top: calc(50% - 6px);
+        left: calc(50% - 6px);
         background: var(--navbar_text);
         content: '';
-        height: 16px;
-        width: 16px;
+        height: 12px;
+        width: 12px;
         border-radius: 50%;
         transition: all 1s;
     }
 
     &::after{
         position: absolute;
-        top: 10px;
-        left: 21px;
+        top: 12px;
+        left: 20px;
         background: var(--body_background);
         content: '';
-        height: 16px;
-        width: 16px;
+        height: 12px;
+        width: 12px;
         border-radius: 50%;
         transition: all 1s;
         opacity: 0;
@@ -122,43 +125,43 @@ nav{
         content: '';
         position: absolute;
         background-color: var(--navbar_text);
-        border-radius: 40%;
-        height: 6px;
-        width: 4px;
-        top: calc(50% - 3px);
-        left: calc(50% - 2px);
+        border-radius: 100%;
+        height: 5px;
+        width: 3px;
+        top: calc(50% - 2.5px);
+        left: calc(50% - 1.5px);
         transition: all 0.5s;
         
         &:nth-of-type(1){
-            transform: rotate(0deg) translateY(12px);
+            transform: rotate(0deg) translateY(10px);
         }
 
         &:nth-of-type(2){
-            transform: rotate(45deg) translateY(12px);
+            transform: rotate(45deg) translateY(10px);
         }
 
         &:nth-of-type(3){
-            transform: rotate(90deg) translateY(12px);
+            transform: rotate(90deg) translateY(10px);
         }
 
         &:nth-of-type(4){
-            transform: rotate(135deg) translateY(12px);
+            transform: rotate(135deg) translateY(10px);
         }
 
         &:nth-of-type(5){
-            transform: rotate(180deg) translateY(12px);
+            transform: rotate(180deg) translateY(10px);
         }
 
         &:nth-of-type(6){
-            transform: rotate(225deg) translateY(12px);
+            transform: rotate(225deg) translateY(10px);
         }
 
         &:nth-of-type(7){
-            transform: rotate(270deg) translateY(12px);
+            transform: rotate(270deg) translateY(10px);
         }
 
         &:nth-of-type(8){
-            transform: rotate(315deg) translateY(12px);
+            transform: rotate(315deg) translateY(10px);
         }
     }
 }
@@ -200,8 +203,8 @@ nav{
                 background: var(--navbar_background);
                 color: var(--navbar_text);
                 display: block;
-                font-size: 24px;
-                font-weight: 700;
+                font-size: 16px;
+                font-weight: 300;
                 padding: 12px 0;
                 margin: 0;
                 text-align: center;
@@ -226,8 +229,8 @@ nav{
             
             .language-flag{
                 .icon{
-                    width: 42px;
-                    height: 42px;
+                    width: 36px;
+                    height: 36px;
                 }
             }
         }
